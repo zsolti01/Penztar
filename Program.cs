@@ -19,9 +19,23 @@ namespace Penztar
                 money[i] = Convert.ToInt32(Console.ReadLine());
             }
         }
+
+        public static int bevetel() 
+        {
+            int sum = 0;
+
+            for (int i = 0; i < money.Length; i++)
+            {
+                sum = sum + tm[i] * money[i];
+            }
+
+            return sum;
+        }
+
         static void Main(string[] args)
         {
             beker();
+            Console.WriteLine($"A napi bevétel {bevetel()}Ft volt.");
         }
     }
 }
